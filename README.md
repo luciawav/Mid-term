@@ -1,60 +1,18 @@
-# p5.js Template
 
-This is a README file that can be used to describe and document your assignment.
+# Mid-term 
+I willl choose one of my favourite movie *BLACK SWAN* to create
+a interactive movie poster. *BLACK SWAN* is a psychological thriller that explores the intense and competitive world of ballet. The story happens around Nina Sayers, a talented but fragile ballet dancer, as she prepares for the lead role in "Swan Lake." The film delves into her psychological descent into madness and her transformation into the Black Swan character since she really want to be PERFECT to play that role.
 
-Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
+**Ideas and sketches**
+-size: I want a regular poster size 12 x 18
+-I will use pictures as metapher of the main idea of the movie,that is the transition from white swan to black swan.
+-I will use visual elements, animation, and interactivity to convey the psychological tension and transformation.
+-I may create the poster both interactive with mouseclick and time based
+-The poster will feature a central image of Nina Sayers (or just swan images) that will gradually transform from the White Swan to the Black Swan over time.
+![blackswan.jpg](https://imgpile.com/images/Dk1bu2.jpg)
+![whiteswan.jpg](https://imgpile.com/images/Dk1dJG.jpg)
 
----
----
-
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
-
-**bold text**
-
-*italicized text*
-
-~~strikethrough text~~
-
-Ordered List:
-1. First item
-2. Second item
-3. Third item
-
-Unordered List:
-- First item
-- Second item
-- Third item
-
-`short code block`
-
-```
-extended code block
-fun() {
-  return 0
-}
-```
-
-Link:  
-[linked text](https://www.example.com)
+- Mouse click movements will allow users to interact with the poster. When the user hovers over specific areas, it will trigger animations or reveal hidden elements like some words from the movie that symbolize key scenes or themes from the movie.
+![sketch.jpg](https://imgpile.com/images/Dk1Mfg.jpg)
 
 
-Image with url:  
-![image description](https://dm-gy-6063-2023f-d.github.io/assets/homework/02/clark-espaco-modulado-00.jpg)
-
-
-Image on repo:  
-![image description](./file-name.jpg)
-
-
-To start a new line, add two spaces at the end of a line, like this:  
-this is a new line.
-
-
-To start a new paragraph, leave an empty line between two lines of text.
-
-This is a new paragraph.
