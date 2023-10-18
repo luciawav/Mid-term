@@ -56,7 +56,7 @@ function drawSwan(x, y, direction) {
   endShape(CLOSE);
 
   // Neck
- 
+ //not sure a line looks fine or a rect()
 
   // Head 
   beginShape();
