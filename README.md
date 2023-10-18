@@ -31,3 +31,10 @@ First of all this week I was thinking about the effect of my mouse hover trigger
 I thought about it, if I need to draw my own swan, then I need the custom function of drawSwan. I started with a base like beginShape, but I'd like to learn a bit more about drawing arcs in some way (I'm still learning)
 
 So I ended up coming up with this based on our Week 3 Boolean Mouseover tutorial, where my mouse fills in black when it hovers over the swan on the left. I'm also using a custom drawSwan function. next I'm going to think about how to make it look better and if I need to use my previous idea, I'm not sure if the hover effect is interesting or the click effect is interesting, but if I want to make the user interact with the screen so that when they click or hover, a special line will be displayed, I'm going to use text effect that I've been thinking about this week. I'll use some text animation to do this hover or click effect.like i=0,i < text. width, i++, or somthing
+
+THINGS NEED TO IMPROVE:
+I don't think I'm getting a handle on this beginShape（）, I'm having a hard time getting a handle on the coordinates and sequencing of the vertex. This is something I need to practice
+
+![ideas random sketches.jpg](https://imgpile.com/images/D6ceDh.jpg)
+![ideas random sketches.jpg](https://imgpile.com/images/D6frP2.jpg)
+![ideas random sketches.jpg](https://imgpile.com/images/D6fzOG.jpg)
