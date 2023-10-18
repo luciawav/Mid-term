@@ -46,3 +46,6 @@ i did several sketches for my design. I will figure out which design visually lo
 ![1.jpg](https://imgpile.com/images/DELfpg.jpg)
 ![2.jpg](https://imgpile.com/images/DELmbc.jpg)
 ![3.jpg](https://imgpile.com/images/DELrmN.jpg)
+
+Or the sudden idea during class07,what if I draw white swan images and then loadImage
+then the left swan will just change into a black swan(just cover the orignial swan during the amount of time)
