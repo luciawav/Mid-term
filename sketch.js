@@ -28,7 +28,7 @@ function setup() {
 }
 
 function draw() {
-  background(225);
+  background(255);
 
   if (
     mouseX >= leftSwanX &&
@@ -55,20 +55,20 @@ function draw() {
 
   image(swanUnfilled, rightSwanX, rightSwanY);
 
-  let elapsed = millis() - startTime;
+  let showSwan = millis() - startTime;
 
   // After 1.05 seconds, "itwasperfect.png" gradually revealed
-  if (elapsed > 1050 && elapsed <= 1300) {
+  if (showSwan > 1050 && showSwan <= 1300) {
     push();
-    tint(255, map(elapsed, 1500, 1300, 0, 255)); // Adjust transparency
+    tint(255, map(showSwan, 1500, 1300, 0, 255)); // Adjust transparency
     image(itWasPerfectImg, width / 2 - itWasPerfectImg.width / 8, 10, itWasPerfectImg.width / 4, itWasPerfectImg.height / 4); // 1/2 size
     pop();
-  } else if (elapsed > 1300) {
+  } else if (showSwan > 1300) {
     image(itWasPerfectImg, width / 2 - itWasPerfectImg.width / 8, 10, itWasPerfectImg.width / 4, itWasPerfectImg.height / 4); // 1/2 size
   }
 
   // 2 seconds after "itwasperfect.png" is revealed, "iwasperfect.png" revealed
-  if (elapsed > 2000) {
+  if (showSwan > 2000) {
     image(iWasPerfectImg, width / 2 - iWasPerfectImg.width / 8, 10 + itWasPerfectImg.height / 4 + 20, iWasPerfectImg.width / 4, iWasPerfectImg.height / 4); // 1/2 size, increased gap
   }
 
