@@ -1,28 +1,40 @@
-let leftSwanX, leftSwanY, leftSwanDirection;
-let leftSwanIsHovered = false; 
+let swanFilled;
+let swanUnfilled;
+let swanTitle;
+let itWasPerfectImg;
+let iWasPerfectImg;
+let leftSwanX, leftSwanY;
+let rightSwanX, rightSwanY;
+let leftSwanIsHovered = false;
+let startTime;
+
+function preload() {
+  swanFilled = loadImage('swan_filled.png');
+  swanUnfilled = loadImage('swan_unfilled.png');
+  swanTitle = loadImage('swan_title.png');
+  itWasPerfectImg = loadImage('itwasperfect.png');
+  iWasPerfectImg = loadImage('iwasperfect.png');
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  leftSwanX = width / 2 - 200;
-  leftSwanY = height / 2;
-  leftSwanDirection = 1;
-  noFill();
-  stroke(0); 
-  drawSwan(leftSwanX, leftSwanY, leftSwanDirection); 
-  noFill();
-  stroke(0); 
-  drawSwan(width / 2 + 200, height / 2, -1); 
+  startTime = millis();
+
+  let gapBetweenSwans = 20;
+  leftSwanX = width / 2 - swanUnfilled.width - gapBetweenSwans / 2;
+  leftSwanY = height / 2 - swanUnfilled.height / 2;
+  rightSwanX = width / 2 + gapBetweenSwans / 2;
+  rightSwanY = height / 2 - swanUnfilled.height / 2;
 }
 
 function draw() {
   background(225);
 
-
   if (
-    mouseX >= leftSwanX - 50 &&
-    mouseX <= leftSwanX + 50 &&
-    mouseY >= leftSwanY - 200 &&
-    mouseY <= leftSwanY + 50
+    mouseX >= leftSwanX &&
+    mouseX <= leftSwanX + swanUnfilled.width &&
+    mouseY >= leftSwanY &&
+    mouseY <= leftSwanY + swanUnfilled.height
   ) {
     leftSwanIsHovered = true;
   } else {
@@ -30,45 +42,36 @@ function draw() {
   }
 
   if (leftSwanIsHovered) {
-    fill(0); 
+    push();
+    scale(-1, 1);
+    image(swanFilled, -leftSwanX - swanFilled.width, leftSwanY);
+    pop();
   } else {
-    noFill(); 
+    push();
+    scale(-1, 1);
+    image(swanUnfilled, -leftSwanX - swanUnfilled.width, leftSwanY);
+    pop();
   }
-  drawSwan(leftSwanX, leftSwanY, leftSwanDirection);
 
-  noFill();
-  drawSwan(width / 2 + 200, height / 2, -1);
+  image(swanUnfilled, rightSwanX, rightSwanY);
 
-}
+  let elapsed = millis() - startTime;
 
-function drawSwan(x, y, direction) {
-  push();
-  translate(x, y);
-  scale(direction, 1);
+  // After 1.05 seconds, "itwasperfect.png" gradually revealed
+  if (elapsed > 1050 && elapsed <= 1300) {
+    push();
+    tint(255, map(elapsed, 1500, 1300, 0, 255)); // Adjust transparency
+    image(itWasPerfectImg, width / 2 - itWasPerfectImg.width / 8, 10, itWasPerfectImg.width / 4, itWasPerfectImg.height / 4); // 1/2 size
+    pop();
+  } else if (elapsed > 1300) {
+    image(itWasPerfectImg, width / 2 - itWasPerfectImg.width / 8, 10, itWasPerfectImg.width / 4, itWasPerfectImg.height / 4); // 1/2 size
+  }
 
-  // Body
-  beginShape();
-  vertex(-100, 20);
-  vertex(0, 80);
-  vertex(30, 0);
-  vertex(0, -50);
-  vertex(-140, -70);
-  endShape(CLOSE);
+  // 2 seconds after "itwasperfect.png" is revealed, "iwasperfect.png" revealed
+  if (elapsed > 2000) {
+    image(iWasPerfectImg, width / 2 - iWasPerfectImg.width / 8, 10 + itWasPerfectImg.height / 4 + 20, iWasPerfectImg.width / 4, iWasPerfectImg.height / 4); // 1/2 size, increased gap
+  }
 
-  // Neck
- //not sure a line looks fine or a rect()
-
-  // Head 
-  beginShape();
-  vertex(30, -130);
-  vertex(60, -130);
-  vertex(60, -100);
-  vertex(30, -100);
-  endShape(CLOSE);
-
-  // Beak 
-  triangle(60, -100, 90, -100, 60, -120);
-
-  pop();
-
+  // Positioning swanTitle to touch the lower edge of the canvas and centered
+  image(swanTitle, (width - swanTitle.width + 50) / 2, height - swanTitle.height + 200);
 }

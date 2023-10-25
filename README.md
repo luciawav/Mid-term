@@ -49,3 +49,27 @@ i did several sketches for my design. I will figure out which design visually lo
 
 Or the sudden idea during class07,what if I draw white swan images and then loadImage
 then the left swan will just change into a black swan(just cover the orignial swan during the amount of time)
+
+# Mid-term Milestone 3
+Since we learnt how the embed images, I decided to use images in the coding
+Also I use Adobe illustrator to decide which font looks the best in the whole page
+[![line1.png](https://imgpile.com/images/G4YuUh.md.png)
+[![line2.png](https://imgpile.com/images/G4Y7YE.md.png)
+[![blackswan.png](https://imgpile.com/images/G4Y1gX.md.png)
+[![text.png](https://imgpile.com/images/G4Y5tg.md.png)
+[![swanfilled.png](https://imgpile.com/images/G4YNkr.md.png)
+[![swannofill.png](https://imgpile.com/images/G4YwnR.md.png)
+
+I actually think learning how to use loadimage instead of my previous method made things a lot easier for me, and I'm happy about it. This week I simply looked at considering typography and how to arrange my pictures and text pn the page. My previous idea was to have two sentences appear by clicking on them, but I now think it would be more interesting to control it through timing. So I've been working on millis this week.
+
+my ideas process will be this:
+1. preload images
+2. draw images
+3. text with mouse hover control
+4. gradually appearing the small texts
+5. time controls
+
+[![sketch1.jpg](https://imgpile.com/images/G4mDwb.md.jpg)
+[![sketch2.jpg](https://imgpile.com/images/G4mt0l.md.jpg)
+[![sketch3.jpg](https://imgpile.com/images/G4mGi3.md.jpg)
+
